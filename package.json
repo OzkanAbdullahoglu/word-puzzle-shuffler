@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "shuffle given two words properly so user can find out the word into the puzzle",
   "main": "index.js",
- "repository": {
-  "type" : "git",
-  "url" : "https://github.com/OzkanAbdullahoglu/word-puzzle-shuffler.git"
-},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OzkanAbdullahoglu/word-puzzle-shuffler.git"
+  },
   "keywords": [
     "npm",
     "puzzle",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
-    "eslint": "^3.11.1",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-config-quintoandar-pwa": "^2.0.0",
