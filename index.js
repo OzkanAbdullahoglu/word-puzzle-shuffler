@@ -160,6 +160,9 @@ const shuffle = (words) => {
   if (!Array.isArray(words)) throw Error('Words must be in an array');
   if (words.length !== 2) throw Error('Just Two words can be accepted!');
   if (words.map((e) => e.filter((f) => typeof (f) !== 'string').length) > 0) throw Error('Just strings are accepted!');
+ // check the order of the words in the array
+  const checkTheOrder = words[0].length > words[1].length;
+
     // to reset the old values
   values.length = 0;
   getTestingIndexes();
@@ -169,10 +172,19 @@ const shuffle = (words) => {
   matrice.forEach((value) => {
     values.push(value);
   });
+  if (checkTheOrder) {
+    return {
+      value: values,
+      firstWordIndexes: assignedIndexForSecondWord,
+      secondWordIndexes: assignedIndexForFirstWord,
+      initialMatrixIndexes: indexes,
+    };
+  }
   return {
     value: values,
     firstWordIndexes: assignedIndexForFirstWord,
     secondWordIndexes: assignedIndexForSecondWord,
+    initialMatrixIndexes: indexes,
   };
 };
 
