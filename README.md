@@ -16,6 +16,7 @@ getCellValues returns an array which includes shuffled letters from 0 - 9 indexe
 Total length of the two words have to be 9 to fit in 3 x 3 matrices.
 
 ```const shuffledLetters = shuffle.getCellValues(['LEMON', 'PEAR']);```
+
 ```["E","N","O","A","P","M","R","E","L"]```
 
 <p align="center">
