@@ -1,4 +1,4 @@
-#Word Puzzle Shuffler (React)
+#Word Puzzle Shuffler
 
 A simple package to shuffle given two words properly to the 3 x 3 matrices.
 
