@@ -1,4 +1,4 @@
-#Word Puzzle Shuffler
+# Word Puzzle Shuffler
 
 A simple package to shuffle given two words properly to the 3 x 3 matrices.
 
@@ -39,6 +39,7 @@ getFirstWordIndexes returns an array which provides indexes of the first word in
 <p align="center">
 <img src="./assets/images/getFirstWordIndexes.png" alt="first word indexes" width="320px" height=160px>
 </p>
+
 ### `shuffle.getSecondWordIndexes(['wordA: string, wordB: string])`
 getSecondWordIndexes returns an array which provides indexes of the second word in 3 x 3 matrices.
 
