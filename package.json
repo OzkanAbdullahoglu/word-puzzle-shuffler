@@ -18,7 +18,7 @@
     "shuffle"
   ],
   "author": "Ozkan Abdullahoglu",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "mathjs": "^6.6.0"
   }
