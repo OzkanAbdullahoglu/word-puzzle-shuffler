@@ -10,7 +10,7 @@ A simple package to shuffle given two words properly to the 3 x 3 matrices.
 
 ## Usage
 
-[![npm install word-puzzle-shuffler]()]()
+[![npm install word-puzzle-shuffler](https://nodei.co/npm/word.puzzle.shuffler.png?mini=true)](https://www.npmjs.com/package/word-puzzle-shuffler)
 
 ### const shuffle = `require('./word-puzzle-shuffler')`
 ### `shuffle(['wordA: string, wordB: string]).getCellValues`
