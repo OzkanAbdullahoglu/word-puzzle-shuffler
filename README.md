@@ -1,4 +1,4 @@
-#Word Puzzle Shuffler
+# Word Puzzle Shuffler
 
 [![Build Status](https://travis-ci.com/OzkanAbdullahoglu/word-puzzle-shuffler.svg?branch=master)](https://travis-ci.com/OzkanAbdullahoglu/word-puzzle-shuffler) [![npm version](https://badge.fury.io/js/word-puzzle-shuffler.svg)](https://badge.fury.io/js/word-puzzle-shuffler)
 ![GitHub repo size](https://img.shields.io/github/repo-size/OzkanAbdullahoglu/word-puzzle-shuffler)
@@ -21,7 +21,7 @@ A simple package to shuffle given two words properly to the 3 x 3 matrices.
 getCellValues returns an array which includes shuffled letters from 0 - 9 indexes, 
 Total length of the two words have to be 9 to fit in 3 x 3 matrices.
 
-```const shuffledLetters = shuffle.getCellValues(['LEMON', 'PEAR']);```
+```const shuffledLetters = shuffle(['LEMON', 'PEAR']).getCellValues;```
 ```//["E","N","O","A","P","M","R","E","L"]```
 
 <p align="center">
@@ -31,7 +31,7 @@ Total length of the two words have to be 9 to fit in 3 x 3 matrices.
 ### `shuffle(['wordA: string, wordB: string]).getFirstWordIndexes`
 getFirstWordIndexes returns an array which provides indexes of the first word in 3 x 3 matrices.
 
-```const firstWordIndexes = shuffle.getFirstWordIndexes(['LEMON', 'PEAR']);```
+```const firstWordIndexes = shuffle(['LEMON', 'PEAR']).getFirstWordIndexes;```
 ```
 //[
     [2,2],
@@ -48,7 +48,7 @@ getFirstWordIndexes returns an array which provides indexes of the first word in
 ### `shuffle(['wordA: string, wordB: string]).getSecondWordIndexes`
 getSecondWordIndexes returns an array which provides indexes of the second word in 3 x 3 matrices.
 
-```const SecondWordIndexes = shuffle.getSecondWordIndexes(['LEMON', 'PEAR']);```
+```const SecondWordIndexes = shuffle(['LEMON', 'PEAR']).getSecondWordIndexes;```
 ```
 //[
     [1,1],
