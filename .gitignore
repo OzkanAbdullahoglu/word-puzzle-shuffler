@@ -1,0 +1,10 @@
+node_modules/**/*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.orig.*
+web-build/
+web-report/
+
