@@ -1,5 +1,4 @@
 /* eslint-disable linebreak-style */
-import { includes } from 'ramda';
 // mathJS library
 const math = require('mathjs');
 
@@ -51,7 +50,7 @@ const reset = (words) => {
  *  @param {Object[]} words- array which keeps the words of the game
  */
 const randomiseAll = (words) => {
-    // sorting the words in ascending order according to their length
+  // sorting the words in ascending order according to their length
   words.sort((a, b) => a.length - b.length);
   generateRandomIndexes(words[0].split(''), assignedIndexForFirstWord, words);
   generateRandomIndexes(words[1].split(''), assignedIndexForSecondWord, words);
@@ -82,7 +81,7 @@ const getInitialIndex = (assignedIndexes) => {
   const indX = math.pickRandom([0, 1, 2]);
   const indY = math.pickRandom([0, 1, 2]);
   const getInit = () => {
-    if (includes([indX, indY], randomisedIndexesArray)) {
+    if (randomisedIndexesArray.includeArrElm([indX, indY])) {
       return getInitialIndex(assignedIndexes);
     }
     assignedIndexes.push([indX, indY]);
@@ -96,7 +95,7 @@ const getInitialIndex = (assignedIndexes) => {
  *  @param {Object[]} prevIndex- this is an array which keeps previous index
  */
 const pickFollowingIndex = (prevIndex) =>
-    (prevIndex === 0 ? pickerZero() : prevIndex === 1 ? pickerOne() : pickerTwo());
+  (prevIndex === 0 ? pickerZero() : prevIndex === 1 ? pickerOne() : pickerTwo());
 
 /**
  *  @description get the following index according to the previous index
@@ -120,15 +119,15 @@ const infiniteLoop = (assignedIndexes, words) => {
   for (let count = 0; ; count += 1) {
     const indX = pickFollowingIndex(assignedIndexes[assignedIndexes.length - 1][0]);
     const indY = pickFollowingIndex(assignedIndexes[assignedIndexes.length - 1][1]);
-    if (!includes([indX, indY], randomisedIndexesArray)) {
+    if (!randomisedIndexesArray.includeArrElm([indX, indY])) {
       return push(assignedIndexes, indX, indY);
     }
-        // This is to stop the execution immediately in case of finding the solution
+    // This is to stop the execution immediately in case of finding the solution
     if (randomisedIndexesArray.length === indexes.length) {
       break;
     }
-        // If we loop for twenty-five times for a letter,
-        // we break the loop and reset the process,twenty-five times seems to be optimal
+    // If we loop for twenty-five times for a letter,
+    // we break the loop and reset the process,twenty-five times seems to be optimal
     if (count === 25) {
       reset(words);
       break;
@@ -144,51 +143,60 @@ const infiniteLoop = (assignedIndexes, words) => {
  */
 const replaceValuesInMatrix = (words) => {
   assignedIndexForFirstWord.map((elm, index) =>
-        matrice.subset(math.index(elm[0], elm[1]), words[0].split('')[index])
-    );
+    matrice.subset(math.index(elm[0], elm[1]), words[0].split('')[index])
+  );
   assignedIndexForSecondWord.map((elm, index) =>
-        matrice.subset(math.index(elm[0], elm[1]), words[1].split('')[index])
-    );
+    matrice.subset(math.index(elm[0], elm[1]), words[1].split('')[index])
+  );
 };
+
+
+Array.prototype.includeArrElm = function (elm) {
+  return (this.filter((e) => (e[0] === elm[0] && e[1] === elm[1])
+  ).length > 0);
+};
+
 
 /**
  *  @description we are exporting this function which ignites the process
  *  @param {Object[]} words- array which keeps the words of the game
  */
 const shuffle = (words) => {
-    // checking inputs
+  // checking inputs
+  console.log('WORDS', words)
   if (!Array.isArray(words)) throw Error('Words must be in an array');
   if (words.length !== 2) throw Error('Just Two words can be accepted!');
-  if (words.map((e) => e.filter((f) => typeof (f) !== 'string').length) > 0) throw Error('Just strings are accepted!');
- // check the order of the words in the array
+  if (words.map((e) => e.split('').filter((f) => parseInt(f, 10)))
+    .filter((g) => g.length > 0).length > 0) {
+    throw Error('Just letters are accepted!');
+  }
+  if (words[0].length + words[1].length !== 9) {
+    throw Error('Total words length must be nine to fit 3 x 3 matrices!');
+  }
+  // check the order of the words in the array
   const checkTheOrder = words[0].length > words[1].length;
 
-    // to reset the old values
+  // to reset the old values
   values.length = 0;
   getTestingIndexes();
   reset(words);
   replaceValuesInMatrix(words);
-    // collecting final values (randomised indexes) from matrice after replacement
+  // collecting final values (randomised indexes) from matrice after replacement
   matrice.forEach((value) => {
     values.push(value);
   });
   if (checkTheOrder) {
     return {
-      value: values,
-      firstWordIndexes: assignedIndexForSecondWord,
-      secondWordIndexes: assignedIndexForFirstWord,
-      initialMatrixIndexes: indexes,
+      getCellValues: values,
+      getFirstWordIndexes: assignedIndexForSecondWord,
+      getSecondWordIndexes: assignedIndexForFirstWord,
     };
   }
   return {
-    value: values,
-    firstWordIndexes: assignedIndexForFirstWord,
-    secondWordIndexes: assignedIndexForSecondWord,
-    initialMatrixIndexes: indexes,
+    getCellValues: values,
+    getFirstWordIndexes: assignedIndexForFirstWord,
+    getSecondWordIndexes: assignedIndexForSecondWord,
   };
 };
 
-module.exports = {
-  shuffle,
-};
-
+module.exports = shuffle;
