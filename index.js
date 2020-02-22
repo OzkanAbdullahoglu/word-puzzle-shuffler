@@ -150,12 +150,10 @@ const replaceValuesInMatrix = (words) => {
   );
 };
 
-
 Array.prototype.includeArrElm = function (elm) {
   return (this.filter((e) => (e[0] === elm[0] && e[1] === elm[1])
   ).length > 0);
 };
-
 
 /**
  *  @description we are exporting this function which ignites the process
@@ -163,7 +161,6 @@ Array.prototype.includeArrElm = function (elm) {
  */
 const shuffle = (words) => {
   // checking inputs
-  console.log('WORDS', words)
   if (!Array.isArray(words)) throw Error('Words must be in an array');
   if (words.length !== 2) throw Error('Just Two words can be accepted!');
   if (words.map((e) => e.split('').filter((f) => parseInt(f, 10)))
