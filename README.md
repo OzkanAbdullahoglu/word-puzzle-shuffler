@@ -22,7 +22,8 @@ getCellValues returns an array which includes shuffled letters from 0 - 9 indexe
 Total length of the two words have to be 9 to fit in 3 x 3 matrices.
 
 ```const shuffledLetters = shuffle(['LEMON', 'PEAR']).getCellValues;```
-```//["E","N","O","A","P","M","R","E","L"]```
+
+```["E","N","O","A","P","M","R","E","L"]```
 
 <p align="center">
 <img src="./assets/images/demoCellsValue.png" alt="proper cells value" width="320px" height=160px>
@@ -32,8 +33,9 @@ Total length of the two words have to be 9 to fit in 3 x 3 matrices.
 getFirstWordIndexes returns an array which provides indexes of the first word in 3 x 3 matrices.
 
 ```const firstWordIndexes = shuffle(['LEMON', 'PEAR']).getFirstWordIndexes;```
+
 ```
-//[
+[
     [2,2],
     [2,1],
     [1,2],
@@ -50,7 +52,7 @@ getSecondWordIndexes returns an array which provides indexes of the second word 
 
 ```const SecondWordIndexes = shuffle(['LEMON', 'PEAR']).getSecondWordIndexes;```
 ```
-//[
+[
     [1,1],
     [0,0],
     [1,0],
