@@ -1,6 +1,6 @@
 {
   "name": "word-puzzle-shuffler",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "shuffle given two words properly so user can find out the word into the puzzle",
   "main": "index.js",
   "repository": {
@@ -9,12 +9,12 @@
   },
   "homepage": "https://https://github.com/OzkanAbdullahoglu/word-puzzle-shuffler#readme",
   "keywords": [
-    "npm",
+    "npm shuffle",
     "puzzle",
     "word",
     "word shuffle",
     "word search puzzle",
-    "npm",
+    "npm word shuffle",
     "shuffle"
   ],
   "author": "Ozkan Abdullahoglu",
