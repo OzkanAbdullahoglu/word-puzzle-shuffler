@@ -1,6 +1,6 @@
 {
   "name": "word-puzzle-shuffler",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "shuffle given two words properly so user can find out the word into the puzzle",
   "main": "index.js",
   "repository": {
@@ -12,8 +12,8 @@
     "npm",
     "puzzle",
     "word",
-    "shuffle",
-    "shuffle",
+    "word shuffle",
+    "word search puzzle",
     "npm",
     "shuffle"
   ],
