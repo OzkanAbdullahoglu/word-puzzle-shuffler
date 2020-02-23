@@ -51,7 +51,7 @@ getFirstWordIndexes returns an array which provides indexes of the first word in
 ### `shuffledData.getSecondWordIndexes`
 getSecondWordIndexes returns an array which provides indexes of the second word in 3 x 3 matrices.
 
-```const SecondWordIndexes = shuffledData.getSecondWordIndexes;```
+```const secondWordIndexes = shuffledData.getSecondWordIndexes;```
 ```
 [
     [1,1],
