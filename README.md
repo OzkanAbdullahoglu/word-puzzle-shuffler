@@ -68,3 +68,4 @@ getSecondWordIndexes returns an array which provides indexes of the second word 
 ## TODO 
 
 * Improve the code so this package would work with (n x m ) matrices.
+* Add tests included edge cases.
