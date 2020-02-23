@@ -14,12 +14,15 @@ A simple package to shuffle given two words properly to the 3 x 3 matrices.
 
 [![npm install word-puzzle-shuffler](https://nodei.co/npm/word-puzzle-shuffler.png)](https://nodei.co/npm/word-puzzle-shuffler/)
 
-### `const shuffle = require('./word-puzzle-shuffler')`
-### `shuffle(['wordA: string, wordB: string]).getCellValues`
+### `const shuffle = require('word-puzzle-shuffler')`
+### `const shuffledData = shuffle(['wordA: string, wordB: string])`
+### `shuffledData.getCellValues`
 getCellValues returns an array which includes shuffled letters from 0 - 9 indexes, 
 Total length of the two words have to be 9 to fit in 3 x 3 matrices.
 
-```const shuffledLetters = shuffle(['LEMON', 'PEAR']).getCellValues;```
+```const shuffledData = shuffle(['LEMON', 'PEAR']);```
+
+```const cellValues = shuffledData.getCellValues;```
 
 ```["E","N","O","A","P","M","R","E","L"]```
 
@@ -27,10 +30,10 @@ Total length of the two words have to be 9 to fit in 3 x 3 matrices.
 <img src="./assets/images/demoCellsValue.png" alt="proper cells value" width="320px" height=160px>
 </p>
 
-### `shuffle(['wordA: string, wordB: string]).getFirstWordIndexes`
+### `shuffledData.getFirstWordIndexes`
 getFirstWordIndexes returns an array which provides indexes of the first word in 3 x 3 matrices.
 
-```const firstWordIndexes = shuffle(['LEMON', 'PEAR']).getFirstWordIndexes;```
+```const firstWordIndexes = shuffledData.getFirstWordIndexes;```
 
 ```
 [
@@ -45,10 +48,10 @@ getFirstWordIndexes returns an array which provides indexes of the first word in
 <img src="./assets/images/getFirstWordIndexes.png" alt="first word indexes" width="320px" height=160px>
 </p>
 
-### `shuffle(['wordA: string, wordB: string]).getSecondWordIndexes`
+### `shuffledData.getSecondWordIndexes`
 getSecondWordIndexes returns an array which provides indexes of the second word in 3 x 3 matrices.
 
-```const SecondWordIndexes = shuffle(['LEMON', 'PEAR']).getSecondWordIndexes;```
+```const SecondWordIndexes = shuffledData.getSecondWordIndexes;```
 ```
 [
     [1,1],
