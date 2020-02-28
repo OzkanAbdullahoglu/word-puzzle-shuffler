@@ -12,7 +12,7 @@ A simple package to shuffle given two words properly to the 3 x 3 matrices.
 
 ## Usage
 
-[![npm install word-puzzle-shuffler](https://nodei.co/npm/word-puzzle-shuffler.png)](https://nodei.co/npm/word-puzzle-shuffler/)
+[![npm install word-puzzle-shuffler](https://nodei.co/npm/word-puzzle-shuffler.png)](https://nodei.co/npm/word-puzzle-shuffler/) [![Greenkeeper badge](https://badges.greenkeeper.io/OzkanAbdullahoglu/word-puzzle-shuffler.svg)](https://greenkeeper.io/)
 
 ### `const shuffle = require('word-puzzle-shuffler')`
 ### `const shuffledData = shuffle(['wordA: string, wordB: string])`
