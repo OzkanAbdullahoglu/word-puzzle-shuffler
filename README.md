@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/OzkanAbdullahoglu/word-puzzle-shuffler.svg?branch=master)](https://travis-ci.com/OzkanAbdullahoglu/word-puzzle-shuffler) [![npm version](https://badge.fury.io/js/word-puzzle-shuffler.svg)](https://badge.fury.io/js/word-puzzle-shuffler)
 ![GitHub repo size](https://img.shields.io/github/repo-size/OzkanAbdullahoglu/word-puzzle-shuffler)
-[![Greenkeeper badge](https://badges.greenkeeper.io/OzkanAbdullahoglu/word-puzzle-shuffler.svg)](https://greenkeeper.io/)
+
 
 A simple package to shuffle given two words properly to the 3 x 3 matrices. 
 
